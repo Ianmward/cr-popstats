@@ -9,10 +9,8 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     # site name from env variable
-    site_name = os.environ.get('SITE_NAME')
+    site_name = 'Population Statistics'
     pod_name = os.environ.get('POD_NAME') 
-    #if site_name == 'None':
-        site_name = 'Population Statistics'
     # grab IP from env variable
     ip_address = get_ip()
     if ip_address =='': #ip_address is undefined, likely missing fall-back environment variable
