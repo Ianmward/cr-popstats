@@ -11,7 +11,7 @@ def home():
     # site name from env variable
     site_name = os.environ.get('SITE_NAME')
     pod_name = os.environ.get('POD_NAME') 
-    if site_name == '':
+    if site_name == 'None':
         site_name = 'Population Statistics'
     # grab IP from env variable
     ip_address = get_ip()
